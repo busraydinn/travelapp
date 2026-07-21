@@ -8,17 +8,17 @@ import NotFound from './pages/NotFound';
 import Details from './pages/Details';
 function App() {
   return (
-    <BrowserRouter>
-        <Routes>
-          <Route path='/travelapp' element={<Layout/>}>
-              <Route index element={<Home/>}></Route>
-              <Route path='/travelapp/about' element={<About/>}></Route>
-              <Route path='/travelapp/contact' element={<Contact/>}></Route>
-              <Route path='/travelapp/details/:id' element={<Details/>}></Route>
-              <Route path='/travelapp/*' element={<NotFound/>}></Route>
-          </Route>
-        </Routes>
-    </BrowserRouter>
+    <BrowserRouter basename="/travelapp">
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="details/:id" element={<Details />} />
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  </Routes>
+</BrowserRouter>
   )
 }
 
