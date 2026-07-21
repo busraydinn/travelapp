@@ -6,7 +6,7 @@ function Card(props) {
     const navigate=useNavigate();
      
   return (
-    <div className='sm:h-60 sm:w-40  rounded-xl  border border-gray-300 md:w-60 md:h-70 flex flex-col p-2 hover:border-blue-500 cursor-pointer   ' onClick={()=>navigate(`/details/${props.id}`)}>
+    <div className='sm:h-60 sm:w-40  rounded-xl  border border-gray-300 md:w-60 md:h-70 flex flex-col p-2 hover:border-blue-500 cursor-pointer   ' onClick={()=>navigate(`/travelapp/details/${props.id}`)}>
         <img src={props.photo} className='rounded-xl '/>
         <div className='flex flex-row justify-between items-center p-2'>
             <h1 className='font-bold'>{props.name}</h1>
